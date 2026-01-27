@@ -14,6 +14,8 @@ fish = "~/.config/fish"
 
 [shell.variables]
 editor = "/usr/bin/nvim"
+terminal = "" # set by local.toml
+shell = "/usr/bin/fish"
 
 [nvim.files]
 nvim = "~/.config/nvim"
@@ -28,9 +30,6 @@ depends = ["foot"]
 sway = "~/.config/sway"
 waybar = "~/.config/waybar"
 
-[i3]
-depends = ["x", "alacritty"]
-
 [i3.files]
 i3 = "~/.config/i3"
 
@@ -38,13 +37,13 @@ i3 = "~/.config/i3"
 xprofile = "~/.xprofile"
 
 [foot]
-depends = ["fish"]
+depends = ["shell"]
 
 [foot.files]
 foot = "~/.config/foot"
 
 [alacritty]
-depends = ["fish"]
+depends = ["shell"]
 
 [alacritty.files]
 alacritty = "~/.config/alacritty"

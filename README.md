@@ -10,20 +10,21 @@ I include a x86_64 binary for dotter in the project root.
 Dotter uses TOML files to define a machine-specific configuration that may contain many application level configuration files.
 Application level configuration files are organized into _packages_ that define where to put configuration files on the target machine.
 Each machine specifies which packages to include in a TOML file at `.dotter/local.toml` which is not included in the repository.
+Start the configuration of a new machine by defining a `.dotter/local.toml` file.
 
-On my Ubuntu X11 desktop I include three packages:
+On my Ubuntu X11 desktop:
 ```
 includes = [".dotter/include/ubuntu.toml"]
-packages = ["i3", "nvim", "xdg"]
+packages = ["i3", "nvim", "xdg", "alacritty", "fish", "x"]
 
 [files]
 
 [variables]
+editor = "/usr/local/bin/nvim"
+shell = "/usr/bin/fish"
+terminal = "/usr/bin/alacritty"
 ```
 
-A package can define dependencies which are automatically included along with the dependent.
-For example, the `i3` package depends on `alacritty` since I have it configured as my default terminal emulator.
-Start the configuration of a new machine by defining a `.dotter/local.toml` file.
 
 To _deploy_ the configuration files according to the `.dotter/local.toml` file:
 ```

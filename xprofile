@@ -1,5 +1,5 @@
-export TERMINAL="/usr/bin/alacritty"
-export EDITOR="nvim"
-export SHELL="/usr/bin/fish"
+export TERMINAL="{{terminal}}"
+export SHELL="{{shell}}"
+export EDITOR="{{editor}}"
 
 setxkbmap -option caps:escape
