@@ -1,0 +1,82 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    // "height": 30, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 5, // Gaps between modules (4px)
+
+    // Choose the order of the modules
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode"
+    ],
+    "modules-right": [
+	"cpu",
+	"memory",
+	"disk",
+        "network",
+	"pulseaudio",
+        "battery",
+        "clock"
+    ],
+
+    // Module configurations.
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+
+    "sway/workspaces": {
+	"all-outputs": true,	
+   	"format": "{index}"
+    },
+
+    "cpu": {
+	"interval": 1,
+	"format": "cpu: {usage}%"
+    },
+
+    "memory": {
+	"interval": 1,
+	"format": "mem: {percentage}%"
+    },
+
+    "disk": {
+   	"format": "dsk: {percentage_used}%"
+    },
+
+    // Documentation
+    // https://github.com/Alexays/Waybar/wiki/Module:-Clock
+    "clock": {
+	"interval": 1,
+	"format":"{:%D %T}",
+        "timezone": "America/New_York",
+	"tooltip": false
+    },
+
+    // Documentation
+    // https://github.com/Alexays/Waybar/wiki/Module:-Battery
+    "battery": {
+	"interval": 1,
+	"states": {
+		"critical": 20
+	},
+        "format": "bat: {capacity}% {power:2.0f}W",
+	"tooltip": false
+    },
+
+    // Documentation
+    // https://github.com/Alexays/Waybar/wiki/Module:-PulseAudio
+    "pulseaudio": {
+	"format": "vol: {volume}%",
+	"tooltip": false
+    },
+
+    // Documentation
+    // https://github.com/Alexays/Waybar/wiki/Module:-Network
+    "network": {
+        "format": "net: {essid}",
+	"tooltip": false
+    }
+}
+

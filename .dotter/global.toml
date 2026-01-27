@@ -1,0 +1,53 @@
+[helpers]
+
+[bash]
+depends = ["shell"]
+
+[bash.files]
+bashrc = "~/.bashrc"
+
+[fish]
+depends = ["shell"]
+
+[fish.files]
+fish = "~/.config/fish"
+
+[shell.variables]
+editor = "/usr/bin/nvim"
+
+[nvim.files]
+nvim = "~/.config/nvim"
+
+[xdg.files]
+xdg = "~/.config"
+
+[sway]
+depends = ["foot"]
+
+[sway.files]
+sway = "~/.config/sway"
+waybar = "~/.config/waybar"
+
+[i3]
+depends = ["x", "alacritty"]
+
+[i3.files]
+i3 = "~/.config/i3"
+
+[x.files]
+xprofile = "~/.xprofile"
+
+[foot]
+depends = ["fish"]
+
+[foot.files]
+foot = "~/.config/foot"
+
+[alacritty]
+depends = ["fish"]
+
+[alacritty.files]
+alacritty = "~/.config/alacritty"
+
+[settings]
+default_target_type = "automatic"
