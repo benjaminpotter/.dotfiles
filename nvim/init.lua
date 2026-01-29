@@ -1045,7 +1045,21 @@ require('lazy').setup({
     'stevearc/oil.nvim',
     ---@module 'oil'
     ---@type oil.SetupOpts
-    opts = {},
+    keys = {
+      {
+        mode = 'n',
+        '<leader>o',
+        '<cmd>Oil<CR>',
+        desc = '[o]pen current directory',
+      },
+    },
+    opts = {
+      default_file_explorer = true,
+      view_options = {
+        show_hidden = true,
+      },
+      use_default_keymaps = true,
+    },
     -- Optional dependencies
     -- dependencies = { { 'nvim-mini/mini.icons', opts = {} } },
     -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
