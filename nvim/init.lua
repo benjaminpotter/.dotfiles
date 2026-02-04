@@ -704,9 +704,7 @@ require('lazy').setup({
         -- gopls = {},
         pyright = {},
         rust_analyzer = {
-          settings = {
-            ['rust-analyzer'] = {},
-          },
+          settings = {},
         },
 
         tinymist = {},
@@ -736,6 +734,18 @@ require('lazy').setup({
           },
         },
       }
+
+      vim.lsp.config('rust_analyzer', {
+        settings = {
+          ['rust-analyzer'] = {
+            checkOnSave = {
+              command = 'clippy',
+              extraArgs = { '--', '-W', 'clippy::pedantic' },
+              enable = true,
+            },
+          },
+        },
+      })
 
       -- Ensure the servers and tools above are installed
       --
