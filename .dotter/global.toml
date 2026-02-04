@@ -32,6 +32,7 @@ waybar = "~/.config/waybar"
 
 [i3.files]
 i3 = "~/.config/i3"
+i3status = "~/.config/i3status/config"
 
 [x.files]
 xprofile = "~/.xprofile"
