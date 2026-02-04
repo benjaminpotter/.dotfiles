@@ -24,7 +24,6 @@ ethernet eth0 {
 
 tztime local {
         format = "%Y-%m-%d %H:%M:%S"
-        hide_if_equals_localtime = true
 }
 
 cpu_usage {
