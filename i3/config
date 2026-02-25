@@ -65,7 +65,7 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym Print exec NOW=$(date +%d-%b-%Y_%H-%M-%S) && maim --format png --select > ~/screenshots/screenshot_$NOW.png && xclip -selection clip -t image/png ~/screenshots/screenshot_$NOW.png
 
 exec --no-startup-id setxkbmap -option caps:escape
-
+exec --no-startup-id xrandr --output DP-0 --left-of DP-4 --rotate right --output DP-4 --auto --primary
 
 # change focus
 bindsym $mod+h focus left
