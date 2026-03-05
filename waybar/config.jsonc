@@ -12,11 +12,11 @@
         "sway/mode"
     ],
     "modules-right": [
-	"cpu",
-	"memory",
-	"disk",
+        "cpu",
+        "memory",
+        "disk",
         "network",
-	"pulseaudio",
+        "pulseaudio",
         "battery",
         "clock"
     ],
@@ -27,56 +27,68 @@
     },
 
     "sway/workspaces": {
-	"all-outputs": true,	
-   	"format": "{index}"
+        "all-outputs": true,
+        "format": "{index}"
     },
 
     "cpu": {
-	"interval": 1,
-	"format": "cpu: {usage}%"
+        "interval": 10,
+        "format": "cpu: {load} {usage}%",
+        // "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}",
+        // "format": "cpu: {icon}",
+        // "format-icons": [
+        //     "<span color='#69ff94'>▁</span>", // green
+        //     "<span color='#2aa9ff'>▂</span>", // blue
+        //     "<span color='#f8f8f2'>▃</span>", // white
+        //     "<span color='#f8f8f2'>▄</span>", // white
+        //     "<span color='#ffffa5'>▅</span>", // yellow
+        //     "<span color='#ffffa5'>▆</span>", // yellow
+        //     "<span color='#ff9977'>▇</span>", // orange
+        //     "<span color='#dd532e'>█</span>"  // red
+        // ]
     },
 
     "memory": {
-	"interval": 1,
-	"format": "mem: {percentage}%"
+        "interval": 10,
+        "format": "mem: {used}/{total} {percentage}%"
     },
 
     "disk": {
-   	"format": "dsk: {percentage_used}%"
+        "format": "dsk: {percentage_used}%"
     },
 
     // Documentation
     // https://github.com/Alexays/Waybar/wiki/Module:-Clock
     "clock": {
-	"interval": 1,
-	"format":"{:%D %T}",
+        "interval": 1,
+        "format":"{:%D %T}",
         "timezone": "America/New_York",
-	"tooltip": false
+        "tooltip": false
     },
 
     // Documentation
     // https://github.com/Alexays/Waybar/wiki/Module:-Battery
     "battery": {
-	"interval": 1,
-	"states": {
-		"critical": 20
-	},
+        "interval": 10,
+        "states": {
+            "critical": 20
+        },
         "format": "bat: {capacity}% {power:2.0f}W",
-	"tooltip": false
+        "tooltip": false
     },
 
     // Documentation
     // https://github.com/Alexays/Waybar/wiki/Module:-PulseAudio
     "pulseaudio": {
-	"format": "vol: {volume}%",
-	"tooltip": false
+        "format": "vol: {volume}%",
+        "tooltip": false
     },
 
     // Documentation
     // https://github.com/Alexays/Waybar/wiki/Module:-Network
     "network": {
         "format": "net: {essid}",
-	"tooltip": false
+        "tooltip": false
     }
 }
 
