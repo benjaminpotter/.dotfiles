@@ -41,7 +41,7 @@ xprofile = "~/.xprofile"
 depends = ["shell"]
 
 [foot.files]
-foot = "~/.config/foot"
+foot = "~/.config/foot/"
 
 [alacritty]
 depends = ["shell"]
