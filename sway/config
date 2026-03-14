@@ -213,6 +213,11 @@ input "ERGO K860 Keyboard" {
     bindsym $mod+Shift+w exec grimshot save active $screenshot_out
     bindsym $mod+Shift+a exec grimshot save area $screenshot_out
 
+# Controlling screen brightness
+
+    bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+    bindsym XF86MonBrightnessUp   exec brightnessctl set +5%
+
 #
 # Resizing containers:
 #
