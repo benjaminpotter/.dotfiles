@@ -24,11 +24,19 @@ nvim = "~/.config/nvim"
 xdg = "~/.config"
 
 [sway]
-depends = ["foot"]
+depends = ["foot", "waybar"]
 
 [sway.files]
 sway = "~/.config/sway"
+
+[waybar.files]
 waybar = "~/.config/waybar"
+
+[hyprland]
+depends = ["foot", "waybar"]
+
+[hyprland.files]
+hyprland = "~/.config/hypr"
 
 [i3.files]
 i3 = "~/.config/i3"
