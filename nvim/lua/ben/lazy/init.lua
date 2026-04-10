@@ -333,8 +333,8 @@ return {
     init = function()
       -- VimTeX configuration goes here, e.g.
       vim.g.vimtex_view_method = 'zathura'
-      vim.g.vimtex_complete_enabled = false
-      vim.g.vimtex_quickfix_autoclose_after_keystrokes = 1
+      vim.g.vimtex_complete_enabled = 0 
+      vim.g.vimtex_quickfix_enabled = 0
     end,
   },
 

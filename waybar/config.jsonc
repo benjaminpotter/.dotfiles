@@ -69,6 +69,7 @@
     // Documentation
     // https://github.com/Alexays/Waybar/wiki/Module:-Battery
     "battery": {
+	"bat": "BAT0",
         "interval": 10,
         "states": {
             "critical": 20
