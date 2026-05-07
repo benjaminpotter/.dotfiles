@@ -62,3 +62,6 @@ default_target_type = "automatic"
 
 [zathura.files]
 zathurarc = "~/.config/zathura"
+
+[R.files]
+Renviron = "~/.Renviron"

@@ -1,0 +1,5 @@
+R_HISTFILE=${HOME}/.local/state/R
+R_HOME_USER=${HOME}/.local/share/R
+R_LIBS_USER=${HOME}/.local/share/R/library
+EDITOR=/usr/bin/nvim
+PAGER=/usr/bin/less

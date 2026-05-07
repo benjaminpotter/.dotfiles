@@ -131,14 +131,6 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
-vim.api.nvim_create_autocmd('BufWritePost', {
-  pattern = 'asy',
-  callback = function()
-    local file = vim.fn.expand '%:p'
-    vim.cmd('silent! !' .. 'asy ' .. file)
-  end,
-})
-
 -- Configuration for .tex and similar.
 vim.api.nvim_create_autocmd('FileType', {
   pattern = 'tex',
@@ -242,6 +234,10 @@ require("lazy").setup({
         }
       })
       vim.lsp.enable('rust_analyzer')
+
+      if vim.fn.executable('ruff') == 1 then
+        vim.lsp.enable('ruff')
+      end
 
       --  This function gets run when an LSP attaches to a particular buffer.
       --    That is to say, every time a new file is opened that is associated with
@@ -368,6 +364,12 @@ require("lazy").setup({
       default_file_explorer = true,
       view_options = {
         show_hidden = true,
+      },
+      columns = {
+        "icon",
+        "permissions",
+        "size",
+        "mtime",
       },
       use_default_keymaps = true,
     },
