@@ -235,6 +235,42 @@ require("lazy").setup({
       })
       vim.lsp.enable('rust_analyzer')
 
+      vim.lsp.config('harper_ls', {
+        filetypes = { "markdown", "text", "tex" },
+        settings = {
+          ["harper-ls"] = {
+            userDictPath = "",
+            workspaceDictPath = "",
+            fileDictPath = "",
+            linters = {
+              SpellCheck = true,
+              SpelledNumbers = false,
+              AnA = true,
+              SentenceCapitalization = true,
+              UnclosedQuotes = true,
+              WrongApostrophe = false,
+              LongSentences = true,
+              RepeatedWords = true,
+              Spaces = true,
+              CorrectNumberSuffix = true
+            },
+            codeActions = {
+              ForceStable = false
+            },
+            markdown = {
+              IgnoreLinkTitle = false
+            },
+            diagnosticSeverity = "hint",
+            isolateEnglish = false,
+            dialect = "American",
+            maxFileLength = 120000,
+            ignoredLintsPath = "",
+            excludePatterns = {}
+          }
+        }
+      })
+      vim.lsp.enable('harper_ls')
+
       if vim.fn.executable('ruff') == 1 then
         vim.lsp.enable('ruff')
       end
