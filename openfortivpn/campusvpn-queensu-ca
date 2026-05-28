@@ -1,0 +1,6 @@
+### configuration file for openfortivpn, see man openfortivpn(1) ###
+
+host = campusvpn.queensu.ca
+port = 443
+
+username = 20bwp
