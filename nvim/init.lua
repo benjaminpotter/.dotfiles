@@ -273,6 +273,9 @@ require("lazy").setup({
       })
       vim.lsp.enable('harper_ls')
 
+      -- vim.lsp.config('clangd'), {})
+      vim.lsp.enable('clangd')
+
       if vim.fn.executable('ruff') == 1 then
         vim.lsp.enable('ruff')
       end
