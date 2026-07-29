@@ -142,6 +142,15 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.opt_local.shiftwidth = 2
     vim.opt_local.softtabstop = 2
     vim.opt_local.expandtab = true
+
+    -- Enable soft wrapping
+    vim.opt.wrap = true
+    -- Wrap lines at a character in 'breakat' (e.g., spaces) rather than mid-word
+    vim.opt.linebreak = true
+    -- Disable hard wrapping (typing won't automatically insert newlines)
+    vim.opt.textwidth = 0
+    -- Optional: Add a visual indicator at the beginning of wrapped lines
+    vim.opt.showbreak = "↪ "
   end,
 })
 
